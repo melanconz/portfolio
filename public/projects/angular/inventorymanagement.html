@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Zachary Melancon</title>
+
+    <!-- Bootstrap Core CSS -->
+    <link href="/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+    <!-- Custom CSS -->
+    <link href="/css/1-col-portfolio.css" rel="stylesheet">
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+</head>
+
+<body>
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+        <div class="container">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="/index.html">Projects by Zachary Melancon</a>
+            </div>
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav navbar-right">
+                    <li>
+                        <a href="/about.html">About</a>
+                    </li>
+                    <li>
+                        <a href="/contact.html">Contact</a>
+                    </li>
+                </ul>
+            </div>
+            <!-- /.navbar-collapse -->
+        </div>
+        <!-- /.container -->
+    </nav>
+
+    <!-- Page Content -->
+    <div class="container">
+
+      <!-- Page Heading -->
+      <div class="row">
+          <div class="col-lg-12">
+              <h1 class="page-header">Inventory Management
+                  <small>Zachary Melancon</small>
+              </h1>
+          </div>
+      </div>
+      <!-- /.row -->
+        <p>
+            This application was designed for Approved Oil in order to manage receiving, moving, and verifying of inventory, and it was created using <b>Ionic</b> and <b>AngularJS</b>. I was solely responsible for the functionality of this application
+            including but not limited to adding <b>Cordova's barcode scanner</b> feature, creating <b>data services</b> and <b>API method calls</b> to grab data from Apporved Oil’s Inventory Management QuickBase application, building out the best work
+            flow for the three possible processes, and creating a user experience that was highly functional yet easy to use.
+        </p>
+        <p>I was responsible for ensuring the application received and updated (when saved) the correct data and tables in the corresponding QuickBase app as well as building the functionality of the application and testing.</p>
+        <br />
+        <small>Click on the images to enlarge them.</small>
+        <div class="row">
+            <div class="col-md-4">
+                <div class="thumbnail">
+                    <h4>Home</h4>
+                    <hr />
+                    <a href="/images/angular/inventorymanagementhome.png" target="_blank">
+                        <img src="/images/angular/inventorymanagementhome.png" alt="Home" style="width:100%">
+                        <div class="caption">
+                            <p>Home page allows users to choose between three possible work processes; Receive, Move, or Physical Inventory</p>
+                        </div>
+                    </a>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="thumbnail">
+                    <h4>Location</h4>
+                    <hr />
+                    <a href="/images/angular/inventorymanagementlocation.png" target="_blank">
+                        <img src="/images/angular/inventorymanagementlocation.png" alt="Location" style="width:100%">
+                        <div class="caption">
+                            <p>When Move or Physical Inventory is clicked or after a Purchase Order is selected during the Receive process, users select a location at which the event is taking place. If inventory is being moved, user will select location
+                                from and then location to appears under the location from section to be chosen</p>
+                        </div>
+                    </a>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="thumbnail">
+                    <h4>Receive POs</h4>
+                    <hr />
+                    <a href="/images/angular/inventorymanagementpos.png" target="_blank">
+                        <img src="/images/angular/inventorymanagementpos.png" alt="Recieve POs" style="width:100%">
+                        <div class="caption">
+                            <p>When Recieve is chosen, a user is prompted to choose the associated Purchase Order</p>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-4">
+                <div class="thumbnail">
+                    <h4>Search Item</h4>
+                    <hr />
+                    <a href="/images/angular/inventorymanagementsearch.png" target="_blank">
+                        <img src="/images/angular/inventorymanagementsearch.png" alt="Seach Item" style="width:100%">
+                        <div class="caption">
+                            <p>
+                              The last step for each process is to search for the item. If form the Recieve process the PO number and location recieve will be displayed.  If from the move process, the location from and location to will be displayed.
+                              If from the Physical Inventory page, the location of which the invetory check is happening will be displayed as well as a list of all inventory in that location to be reviewed and checked.
+                            </p>
+                        </div>
+                    </a>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="thumbnail">
+                    <h4>Item List</h4>
+                    <hr />
+                    <a href="/images/angular/inventorymanagementitemlist.png" target="_blank">
+                        <img src="/images/angular/inventorymanagementitemlist.png" alt="Item List" style="width:100%">
+                        <div class="caption">
+                            <p>
+                              An items barcode can simply be scanned, but if that's not possible, a user can choose to search for an item from a filterable list. If the item a user chooses or scans is an
+                              asset rather than a consummable. The user is then prompted to scan or enter the serial number for that asset.
+                            </p>
+                        </div>
+                    </a>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="thumbnail">
+                    <h4>Save</h4>
+                    <hr />
+                    <a href="/images/angular/inventorymanagementsave.png" target="_blank">
+                        <img src="/images/angular/inventorymanagementsave.png" alt="Save" style="width:100%">
+                        <div class="caption">
+                            <p>When Recieve or Move Items are specified or all Physical Invetory has been reviewed for a location, a save button appears and a user can update the associated QuickBase database with the new information.</p>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+<hr />
+    <!-- Footer -->
+    <footer>
+        <div class="row">
+            <div class="col-lg-12">
+                <p>Copyright &copy; Zachary Melancon 2017</p>
+            </div>
+        </div>
+        <!-- /.row -->
+    </footer>
+    <!-- /.container -->
+
+    <!-- jQuery -->
+    <script src="/js/jquery.js"></script>
+
+    <!-- Bootstrap Core JavaScript -->
+    <script src="/js/bootstrap.min.js"></script>
+
+</body>
+
+</html>
