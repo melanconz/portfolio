@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Zachary Melancon</title>
+
+    <!-- Bootstrap Core CSS -->
+    <link href="/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+    <!-- Custom CSS -->
+    <link href="/css/1-col-portfolio.css" rel="stylesheet">
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+</head>
+
+<body>
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+        <div class="container">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="/index.html">Projects by Zachary Melancon</a>
+            </div>
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav navbar-right">
+                    <li>
+                        <a href="/about.html">About</a>
+                    </li>
+                    <li>
+                        <a href="/contact.html">Contact</a>
+                    </li>
+                </ul>
+            </div>
+            <!-- /.navbar-collapse -->
+        </div>
+        <!-- /.container -->
+    </nav>
+
+    <!-- Page Content -->
+    <div class="container">
+
+        <!-- Page Heading -->
+        <div class="row">
+            <div class="col-lg-12">
+                <h1 class="page-header">Trip Request Application
+                  <small>Zachary Melancon</small>
+              </h1>
+            </div>
+        </div>
+        <!-- /.row -->
+        <p>
+            This application was designed and created using <b>Node.JS, Express.JS, AngularJS, Angular Material</b> for AA Transportation so that trips can be created on QuickBase, and when assigned a
+            driver, these trips can be easily accepted or declined by a driver. Though it is a web page, it was designed with the undersatnding that most users would
+            be viewing it on there phone. Also, when a trip is excepted, a user's google calendar is automatically updated with the trip information
+            using <b>Google Calendar API.</b>
+        </p>
+        <br />
+        <small>Click on the images to enlarge them.</small>
+        <div class="row">
+            <div class="col-md-4">
+                <div class="thumbnail">
+                    <h4>Trip Info Section</h4>
+                    <hr />
+                    <a href="/images/angular/tripassignmentinfo.png" target="_blank">
+                        <img src="/images/angular/tripassignmentinfo.png" alt="Trip Info Section" style="width:100%">
+                        <div class="caption">
+                            <p>
+                              When a trip is updated, a message is sent to the prospective driver with a link to this page. The information that is displayed
+                              is taken from the Trip Assignment that has been created on QuickBase.
+                            </p>
+                        </div>
+                    </a>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="thumbnail">
+                    <h4>Trip at a Glance</h4>
+                    <hr />
+                    <a href="/images/angular/tripassignmenttripataglance.png" target="_blank">
+                        <img src="/images/angular/tripassignmenttripataglance.png" alt="Trip at a Glance" style="width:100%">
+                        <div class="caption">
+                            <p>
+                              The second section contains the pick up time of the first trip and the drop of time of that last
+                              so that a driver can easily establish whether or not they can accept this trip.
+                            </p>
+                        </div>
+                    </a>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="thumbnail">
+                    <h4>Legs Section</h4>
+                    <hr />
+                    <a href="/images/angular/tripassignmentlegs.png" target="_blank">
+                        <img src="/images/angular/tripassignmentlegs.png" alt="Legs Section" style="width:100%">
+                        <div class="caption">
+                            <p>
+                              The last section contains all the informations of all available legs of the trip assignment.
+                              Tabs are created for each leg specified in the Trip Assignment regardless of the number of legs.
+                              A driver can choose to Accept or Decline by simply clicking the associated button.
+                            </p>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-4">
+                <div class="thumbnail">
+                    <h4>Reason for Declining</h4>
+                    <hr />
+                    <a href="/images/angular/tripassignmentreason.png" target="_blank">
+                        <img src="/images/angular/tripassignmentreason.png" alt="Reason for Declining" style="width:100%">
+                        <div class="caption">
+                            <p>
+                              If a user declines a trip, they are required to give a reason. If other is chosen, a text line appears that requires them
+                              to type their specific reason for declining this trip.
+                            </p>
+                        </div>
+                    </a>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="thumbnail">
+                    <h4>Accepting a Trip</h4>
+                    <hr />
+                    <a href="/images/angular/tripassignmentaccept.png" target="_blank">
+                        <img src="/images/angular/tripassignmentaccept.png" alt="Accepting a Trip" style="width:100%">
+                        <div class="caption">
+                            <p>
+                              When a trip is accepted, a user's Google Calendar is automatically updated as well as the information in the associated QuickBase application.
+                            </p>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <hr />
+
+        <div class="code">
+            <h3>Express code from index.js</h3>
+            <small>addition code unavailable</small>
+            <br />
+            <pre>
+              var express = require('express');
+              var router = express.Router();
+              var qb = require('../scripts/QuickBase.js');
+              var customer = require('../scripts/CustomerConfiguration.js');
+              var records;
+
+              /* GET home page. */
+              router.get('/*/*', function(req, res, next) {
+                  var parameters = req.url.split('/');
+                  var tripId = parameters[1];
+                  var recordID = parameters[2];
+                  qb.initialize(customer, function() {
+                      qb.api('API_DoQuery', {
+                          tableAlias: '_DBID_TRIP_ASSIGNMENTS',
+                          query: "{3.EX.'" + recordID + "'}",
+                          clist: '7'
+                      }, function(response) {
+                          records = response.records[0];
+                          var status = records['7'];
+                          if (status === 'Offered') {
+                              qb.api('API_DoQuery', {
+                                  tableAlias: '_DBID_TRIPS',
+                                  query: "{3.EX.'" + tripId + "'}",
+                                  fieldMap: {
+                                      3: 'id'
+                                  },
+                                  clist: '6.3.30.33.51.100.102.170.47.35'
+                              }, function(response) {
+                                  var legs;
+                                  if (response.records && response.records.length \> 0) {
+                                      records = response.records[0];
+                                      legs = records['6'];
+                                      qb.api('API_DoQuery', {
+                                          tableAlias: '_DBID_LEGS',
+                                          query: '{6.EX.' + legs + '}',
+                                          fieldMap: {
+                                              3: 'id'
+                                          },
+                                          clist: '49.56.145.159.101.100.102.94.160'
+                                      }, function(response) {
+                                          var legRecords = response.records;
+                                          var requestedPickupTimes;
+                                          var suggestedLeaveTimes;
+                                          var estimatedDropOffTimes;
+                                          var pickUpAddresses;
+                                          var dropOffAddresses;
+                                          var legType;
+                                          var tripType;
+                                          var vehicle;
+                                          var date;
+                                          for (var i = 0; i < legRecords.length; i++) {
+                                              requestedPickupTimes += legRecords[i]['159'] + '|';
+                                              suggestedLeaveTimes += legRecords[i]['145'] + '|';
+                                              estimatedDropOffTimes += legRecords[i]['160'] + '|';
+                                              pickUpAddresses += legRecords[i]['49'] + '|';
+                                              dropOffAddresses += legRecords[i]['56'] + '|';
+                                              legType += legRecords[i]['101'] + '|';
+                                              tripType += legRecords[i]['100'] + '|';
+                                              vehicle += legRecords[i]['102'] + '|';
+                                              date += legRecords[i]['94'] + '|';
+                                          }
+                                          requestedPickupTimes = requestedPickupTimes.replace(/undefined/g, '');
+                                          suggestedLeaveTimes = suggestedLeaveTimes.replace(/undefined/g, '');
+                                          estimatedDropOffTimes = estimatedDropOffTimes.replace(/undefined/g, '');
+                                          pickUpAddresses = pickUpAddresses.replace(/undefined/g, '');
+                                          dropOffAddresses = dropOffAddresses.replace(/undefined/g, '');
+                                          legType = legType.replace(/undefined/g, '');
+                                          tripType = tripType.replace(/undefined/g, '');
+                                          vehicle = vehicle.replace(/undefined/g, '');
+                                          date = date.replace(/undefined/g, '');
+                                          requestedPickupTimes = requestedPickupTimes.split('|');
+                                          suggestedLeaveTimes = suggestedLeaveTimes.split('|');
+                                          estimatedDropOffTimes = estimatedDropOffTimes.split('|');
+                                          pickUpAddresses = pickUpAddresses.split('|');
+                                          dropOffAddresses = dropOffAddresses.split('|');
+                                          legType = legType.split('|');
+                                          tripType = tripType.split('|');
+                                          vehicle = vehicle.split('|');
+                                          date = date.split('|');
+                                          requestedPickupTimes.pop();
+                                          suggestedLeaveTimes.pop();
+                                          estimatedDropOffTimes.pop();
+                                          pickUpAddresses.pop();
+                                          dropOffAddresses.pop();
+                                          legType.pop();
+                                          tripType.pop();
+                                          vehicle.pop();
+                                          date.pop();
+                                          res.render('index', {
+                                              title: 'AAT Trip Request',
+                                              records: records,
+                                              requestedPickupTimes: requestedPickupTimes,
+                                              suggestedLeaveTimes: suggestedLeaveTimes,
+                                              estimatedDropOffTimes: estimatedDropOffTimes,
+                                              pickUpAddresses: pickUpAddresses,
+                                              dropOffAddresses: dropOffAddresses,
+                                              legType: legType,
+                                              tripType: tripType,
+                                              vehicle: vehicle,
+                                              date: date
+                                          });
+                                      });
+                                  } else {
+                                      res.render('MissingAssignment', {
+                                          title: 'TIS Response',
+                                          customer: customer
+                                      });
+                                  }
+                              });
+                          } else {
+                              res.render('../views/TaskStatus', {
+                                  status: status,
+                                  tripId: tripId
+                              });
+                          }
+                      });
+                  });
+              });
+
+              router.post('/*/*', function(req, res, next) {
+                  var parameters = req.url.split('/');
+                  var tripId = parameters[1];
+                  var recordId = parameters[2];
+                  var status = req.body.status;
+                  var reason = req.body.reason;
+                  var other = req.body.other;
+                  qb.initialize(customer, function() {
+                      qb.api('API_EditRecord', {
+                          tableAlias: '_DBID_TRIP_ASSIGNMENTS',
+                          rid: recordId,
+                          field: [{
+                              fid: 7,
+                              value: status
+                          }, {
+                              fid: 30,
+                              value: reason
+                          }, {
+                              fid: 31,
+                              value: other
+                          }]
+                      }, function(response) {
+
+                      });
+                  });
+              });
+
+              module.exports = router;
+              </pre>
+        </div>
+    </div>
+
+
+    <hr />
+    <!-- Footer -->
+    <footer>
+        <div class="row">
+            <div class="col-lg-12">
+                <p>Copyright &copy; Zachary Melancon 2017</p>
+            </div>
+        </div>
+        <!-- /.row -->
+    </footer>
+    <!-- /.container -->
+
+    <!-- jQuery -->
+    <script src="/js/jquery.js"></script>
+
+    <!-- Bootstrap Core JavaScript -->
+    <script src="/js/bootstrap.min.js"></script>
+
+</body>
+
+</html>
