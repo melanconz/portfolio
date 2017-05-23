@@ -12,10 +12,14 @@
     <title>Zachary Melancon</title>
 
     <!-- Bootstrap Core CSS -->
-    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/plugins/font-awesome/css/font-awesome.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 
     <!-- Custom CSS -->
-    <link href="css/1-col-portfolio.css" rel="stylesheet">
+    <link href="/css/1-col-portfolio.css" rel="stylesheet">
 
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -39,16 +43,16 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a class="navbar-brand" href="index.html">Projects by Zachary Melancon</a>
+                <a class="navbar-brand" href="/index.html">Projects by Zachary Melancon</a>
             </div>
             <!-- Collect the nav links, forms, and other content for toggling -->
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                 <ul class="nav navbar-nav navbar-right">
                     <li>
-                        <a href="about.html">About</a>
+                        <a href="/about.html">About</a>
                     </li>
                     <li>
-                        <a href="contact.html">Contact</a>
+                        <a href="/contact.html">Contact</a>
                     </li>
                 </ul>
             </div>
@@ -63,33 +67,134 @@
         <!-- Page Heading -->
         <div class="row">
             <div class="col-lg-12">
-                <h1 class="page-header">Bloccit
-                    <small>Zachary Melancon</small>
-                </h1>
+                <h1 class="page-header">Bloccit (Reddit Clone)
+                  <small>Zachary Melancon</small>
+              </h1>
             </div>
         </div>
         <!-- /.row -->
-
-        <hr />
-
-        <!-- Footer -->
-        <footer>
-            <div class="row">
-                <div class="col-lg-12">
-                    <p>Copyright &copy; Zachary Melancon 2017</p>
+        <p>
+            <i class="fa fa-github" style="padding:2px;"></i><a href="https://github.com/melanconz/bloccit" target="_blank">Github</a>
+        </p>
+        <p>
+            This application was as a project (along with other Rails based applications) while I studied at <a href="https://www.bloc.io" title="opens in new tab" target="_blank">Bloc</a>. It uses the many featues provided by <b>Ruby on Rails</b> to
+            allow for and <b>MVC</b> application that has <b>user authentication, data
+          varification, data seeding for development, user profiles, user roles, it's own JSON API</b> A user can create an account, create posts, comment on posts, upvote, downvote and favorite comments and posts, search posts based on tags.
+        </p>
+        <br />
+        <small>Click on the images to enlarge them.</small>
+        <div class="row">
+            <div class="col-md-4">
+                <div class="thumbnail">
+                    <h4>Home</h4>
+                    <hr />
+                    <a href="/images/home/bloccithome.png" target="_blank">
+                        <img src="/images/home/bloccithome.png" alt="Home" style="width:100%">
+                        <div class="caption">
+                            <p>
+                                If a user is not already logged in when reaching the site, the home page will ask the user to sing in or sign up for an account.
+                            </p>
+                        </div>
+                    </a>
                 </div>
             </div>
-            <!-- /.row -->
-        </footer>
-
+            <div class="col-md-4">
+                <div class="thumbnail">
+                    <h4>Sign Up/Sign In</h4>
+                    <hr />
+                    <a href="/images/rails/bloccitsignup.png" target="_blank">
+                        <img src="/images/rails/bloccitsignup.png" alt="Sign Up/Sign In" style="width:100%">
+                        <div class="caption">
+                            <p>
+                              Users can choose to sign up or sign in, and all information entered is validate, checked against user info
+                              already in database, and checked for security.
+                            </p>
+                        </div>
+                    </a>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="thumbnail">
+                    <h4>Topics</h4>
+                    <hr />
+                    <a href="/images/rails/bloccittopics.png" target="_blank">
+                        <img src="/images/rails/bloccittopics.png" alt="Survey Question" style="width:100%">
+                        <div class="caption">
+                            <p>
+                              Even if auser is not signed in, they can browse topics and posts.  However, they can not create a new topic,
+                              comment on posts, vote on posts etc.
+                            </p>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-4">
+                <div class="thumbnail">
+                    <h4>Topic Page</h4>
+                    <hr />
+                    <a href="/images/rails/bloccittopic.png" target="_blank">
+                        <img src="/images/rails/bloccittopic.png" alt="Topic Page" style="width:100%">
+                        <div class="caption">
+                            <p>
+                              When a topic is clicked, if the topic was created by them or if they are in the admin role, they can choose to edit or delete
+                              the topic. All signed in users can create posts associated with a topic and upvote or downvote posts associated with a topic.
+                            </p>
+                        </div>
+                    </a>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="thumbnail">
+                    <h4>Post Page</h4>
+                    <hr />
+                    <a href="/images/rails/bloccitnewpost.png" target="_blank">
+                        <img src="/images/rails/bloccitnewpost.png" alt="Post Page" style="width:100%">
+                        <div class="caption">
+                            <p>
+                              After a post is created, it can be commented on, voted on, favorited, and if the current user role is admin or the user created the post,
+                              it can be edited or deleted.
+                            </p>
+                        </div>
+                    </a>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="thumbnail">
+                    <h4>User Profile</h4>
+                    <hr />
+                    <a href="/images/rails/bloccituserprofile.png" target="_blank">
+                        <img src="/images/rails/bloccituserprofile.png" alt="User Profile" style="width:100%">
+                        <div class="caption">
+                            <p>
+                              All users have their own profile page that contains a list of posts they've made and their current score.  From there, a user can delete
+                              any posts or topics they have made or add comments to those posts.
+                            </p>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div>
     </div>
+
+    <hr />
+    <!-- Footer -->
+    <footer>
+        <div class="row">
+            <div class="col-lg-12">
+                <p>Copyright &copy; Zachary Melancon 2017</p>
+            </div>
+        </div>
+        <!-- /.row -->
+    </footer>
     <!-- /.container -->
 
     <!-- jQuery -->
-    <script src="js/jquery.js"></script>
+    <script src="/js/jquery.js"></script>
 
     <!-- Bootstrap Core JavaScript -->
-    <script src="js/bootstrap.min.js"></script>
+    <script src="/js/bootstrap.min.js"></script>
 
 </body>
 

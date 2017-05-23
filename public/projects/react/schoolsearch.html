@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Zachary Melancon</title>
+
+    <!-- Bootstrap Core CSS -->
+    <link href="/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/plugins/font-awesome/css/font-awesome.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+    <!-- Custom CSS -->
+    <link href="/css/1-col-portfolio.css" rel="stylesheet">
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+</head>
+
+<body>
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+        <div class="container">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="/index.html">Projects by Zachary Melancon</a>
+            </div>
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav navbar-right">
+                    <li>
+                        <a href="/about.html">About</a>
+                    </li>
+                    <li>
+                        <a href="/contact.html">Contact</a>
+                    </li>
+                </ul>
+            </div>
+            <!-- /.navbar-collapse -->
+        </div>
+        <!-- /.container -->
+    </nav>
+
+    <!-- Page Content -->
+    <div class="container">
+
+      <!-- Page Heading -->
+      <div class="row">
+          <div class="col-lg-12">
+              <h1 class="page-header">School Search
+                  <small>Zachary Melancon</small>
+              </h1>
+          </div>
+      </div>
+      <!-- /.row -->
+        <p>
+          <i class="fa fa-github" style="padding:2px;"></i><a href="https://github.com/melanconz/schoolsearch" target="_blank">Github</a>
+        </p>
+        <p>
+          <i class="fa fa-thumb-tack" style="padding:2px;"></i><a href="https://schoolsearch.herokuapp.com/" target="_blank">Heroku Web App</a>
+        </p>
+        <p>
+          This is a personal project I began in May 2017 because I am interested in React.  It uses or will use <b>React, Redux, Aphrodite, Flex, and more</b>
+          and will eventually have an associated <b>React Native</b> application.  It uses data.gov's <b><a href="https://collegescorecard.ed.gov/data/documentation/" target="_blank">College Scorecard API</a></b> to make
+          finding information about colleges simple.  At the moment, a user can search every college in the US by state, click on that college and get a brief explanation
+          of it.
+        </p>
+        <p>
+          In the future, School Search will include graphic data from the wide variety of information provided by
+          College Scorecard, and eventually, user's will be able to sign up and add prospective colleges to their profile, and
+          universities can easily find prospective students who are interested in attending their school.
+        </p>
+        <br />
+        <small>click to enlarge image</small>
+        <div class="row">
+            <div class="col-md-4">
+                <div class="thumbnail">
+                    <h4>Choose a State</h4>
+                    <hr />
+                    <a href="/images/home/schoolsearch.png" target="_blank">
+                        <img src="/images/home/schoolsearch.png" alt="Choose a State" style="width:100%">
+                        <div class="caption">
+                            <p>
+                              Initially, users can choose a state to filter the schools they will see in the school list.  Eventually, this
+                              page with contain a variety of ways for users to begin their search.
+                            </p>
+                        </div>
+                    </a>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="thumbnail">
+                    <h4>School List</h4>
+                    <hr />
+                    <a href="/images/react/schoolsearchlist.png" target="_blank">
+                        <img src="/images/react/schoolsearchlist.png" alt="School List" style="width:100%">
+                        <div class="caption">
+                            <p>
+                              When a state is chosen, all colleges and universities in that State are queried through College Scorecard in groups of 20. The chosen state
+                              is displayed at the top of the page, the school's name and ownership are displayed, and users are warned if that school is under investigation. Also, the currently displayed schools
+                              can be filtered.
+                            </p>
+                        </div>
+                    </a>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="thumbnail">
+                    <h4>List Footer</h4>
+                    <hr />
+                    <a href="/images/react/schoolsearchlistfooter.png" target="_blank">
+                        <img src="/images/react/schoolsearchlistfooter.png" alt="List Footer" style="width:100%">
+                        <div class="caption">
+                            <p>
+                              At the bottom of the list page, is a custom footer that, when clicked makes an API call for the next page of results for that state.
+                              When a school is hovered over, a blue border displays so that it is apperant that schools can be clicked.
+                            </p>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-4">
+                <div class="thumbnail">
+                    <h4>School Details</h4>
+                    <hr />
+                    <a href="/images/react/schoolsearchdetails.png" target="_blank">
+                        <img src="/images/react/schoolsearchdetails.png" alt="School Details" style="width:100%">
+                        <div class="caption">
+                            <p>
+                              When a school is clicked, a simple detail page is displayed that shows a scools web address, state, locale, Carnegie Classification,
+                              and admission rate.  Later, more graphs and details will be added to this page.
+                            </p>
+                        </div>
+                    </a>
+                </div>
+            </div>
+          </div>
+    </div>
+
+
+<hr />
+    <!-- Footer -->
+    <footer>
+        <div class="row">
+            <div class="col-lg-12">
+                <p>Copyright &copy; Zachary Melancon 2017</p>
+            </div>
+        </div>
+        <!-- /.row -->
+    </footer>
+    <!-- /.container -->
+
+    <!-- jQuery -->
+    <script src="/js/jquery.js"></script>
+
+    <!-- Bootstrap Core JavaScript -->
+    <script src="/js/bootstrap.min.js"></script>
+
+</body>
+
+</html>
