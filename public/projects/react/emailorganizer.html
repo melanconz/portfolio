@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Zachary Melancon</title>
+
+    <!-- Bootstrap Core CSS -->
+    <link href="/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/plugins/font-awesome/css/font-awesome.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+    <!-- Custom CSS -->
+    <link href="/css/1-col-portfolio.css" rel="stylesheet">
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+</head>
+
+<body>
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+        <div class="container">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="/index.html">Projects by Zachary Melancon</a>
+            </div>
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav navbar-right">
+                    <li>
+                        <a href="/about.html">About</a>
+                    </li>
+                    <li>
+                        <a href="/contact.html">Contact</a>
+                    </li>
+                </ul>
+            </div>
+            <!-- /.navbar-collapse -->
+        </div>
+        <!-- /.container -->
+    </nav>
+
+    <!-- Page Content -->
+    <div class="container">
+
+      <!-- Page Heading -->
+      <div class="row">
+          <div class="col-lg-12">
+              <h1 class="page-header">Email Organizer
+                  <small>Zachary Melancon</small>
+              </h1>
+          </div>
+      </div>
+      <!-- /.row -->
+        <p>
+          <i class="fa fa-github" style="padding:2px;"></i><a href="https://github.com/melanconz/return-path-test" target="_blank">Github</a>
+        </p>
+        <p>
+          <i class="fa fa-thumb-tack" style="padding:2px;"></i><a href="https://return-path-challenge.herokuapp.com/" target="_blank">Heroku Web App</a>
+        </p>
+        <p>
+          This application was completed in React as a test for <a href="https://returnpath.com/" title="opens in new tab" target="_blank">Return Path</a> in order to
+          my ability as a front end developer.  I was asked to build an application that took a <b>JSON</b> list of email senders and related information, and match
+          a wire frame using this data.
+        </p>
+        <br />
+        <small>click to enlarge image</small>
+        <div class="row">
+            <div class="col-md-4">
+                <div class="thumbnail">
+                    <h4>Initial State</h4>
+                    <hr />
+                    <a href="/images/react/emailorganizer.png" target="_blank">
+                        <img src="/images/react/emailorganizer.png" alt="Initial State" style="width:100%">
+                        <div class="caption">
+                            <p>
+                              The view matches the wireframe given, exactly, and contains four major components the filterable table, the filter header, the email table,
+                              and the email rows themselves.
+                            </p>
+                        </div>
+                    </a>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="thumbnail">
+                    <h4>Filtering</h4>
+                    <hr />
+                    <a href="/images/react/emailorganizerfilter.png" target="_blank">
+                        <img src="/images/react/emailorganizerfilter.png" alt="Filtering" style="width:100%">
+                        <div class="caption">
+                            <p>
+                              The data can be filtered by specifying a folder from the frop down or searching for a sender using the serach bar.
+                            </p>
+                        </div>
+                    </a>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="thumbnail">
+                    <h4>Changing Folders</h4>
+                    <hr />
+                    <a href="/images/react/emailorganizerfolder.png" target="_blank">
+                        <img src="/images/react/emailorganizerfolder.png" alt="Initial State" style="width:100%">
+                        <div class="caption">
+                            <p>
+                              Change the folder location of a sender, the organize checkbox must be unchecked to allow the drop down on the right hand side of
+                              each Email Row to function.  The border color on the right of each Email Row is associated with each folder and changes if the
+                              folder is changed.
+                            </p>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+<hr />
+    <!-- Footer -->
+    <footer>
+        <div class="row">
+            <div class="col-lg-12">
+                <p>Copyright &copy; Zachary Melancon 2017</p>
+            </div>
+        </div>
+        <!-- /.row -->
+    </footer>
+    <!-- /.container -->
+
+    <!-- jQuery -->
+    <script src="/js/jquery.js"></script>
+
+    <!-- Bootstrap Core JavaScript -->
+    <script src="/js/bootstrap.min.js"></script>
+
+</body>
+
+</html>
