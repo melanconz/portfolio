@@ -63,15 +63,15 @@
     <!-- Page Content -->
     <div class="container">
 
-      <!-- Page Heading -->
-      <div class="row">
-          <div class="col-lg-12">
-              <h1 class="page-header">Inventory Management
+        <!-- Page Heading -->
+        <div class="row">
+            <div class="col-lg-12">
+                <h1 class="page-header">Inventory Management
                   <small>Zachary Melancon</small>
               </h1>
-          </div>
-      </div>
-      <!-- /.row -->
+            </div>
+        </div>
+        <!-- /.row -->
         <p>
             This application was designed for Approved Oil in order to manage receiving, moving, and verifying of inventory, and it was created using <b>Ionic</b> and <b>AngularJS</b>. I was solely responsible for the functionality of this application
             including but not limited to adding <b>Cordova's barcode scanner</b> feature, creating <b>data services</b> and <b>API method calls</b> to grab data from Apporved Oil’s Inventory Management QuickBase application, building out the best work
@@ -127,8 +127,8 @@
                         <img src="/images/angular/inventorymanagementsearch.png" alt="Seach Item" style="width:100%">
                         <div class="caption">
                             <p>
-                              The last step for each process is to search for the item. If form the Recieve process the PO number and location recieve will be displayed.  If from the move process, the location from and location to will be displayed.
-                              If from the Physical Inventory page, the location of which the invetory check is happening will be displayed as well as a list of all inventory in that location to be reviewed and checked.
+                                The last step for each process is to search for the item. If form the Recieve process the PO number and location recieve will be displayed. If from the move process, the location from and location to will be displayed. If from the Physical Inventory page,
+                                the location of which the invetory check is happening will be displayed as well as a list of all inventory in that location to be reviewed and checked.
                             </p>
                         </div>
                     </a>
@@ -142,8 +142,8 @@
                         <img src="/images/angular/inventorymanagementitemlist.png" alt="Item List" style="width:100%">
                         <div class="caption">
                             <p>
-                              An items barcode can simply be scanned, but if that's not possible, a user can choose to search for an item from a filterable list. If the item a user chooses or scans is an
-                              asset rather than a consummable. The user is then prompted to scan or enter the serial number for that asset.
+                                An items barcode can simply be scanned, but if that's not possible, a user can choose to search for an item from a filterable list. If the item a user chooses or scans is an asset rather than a consummable. The user is then prompted to scan or enter the
+                                serial number for that asset.
                             </p>
                         </div>
                     </a>
@@ -162,10 +162,71 @@
                 </div>
             </div>
         </div>
+
+        <hr />
+
+        <div class="code">
+            <h3>Code From the pos.ctrl.js File</h3>
+            <small>addition code unavailable</small>
+            <br />
+            <pre>
+                (function() {
+                  'use strict';
+
+                angular.module('inventorymanagement')
+                  .controller('PosCtrl', PosCtrl);
+
+                  function PosCtrl($scope, QB, $ionicScrollDelegate, $state, $stateParams, $timeout, Data, Utils) {
+
+                    init();
+
+                    $scope.reload = reload;
+                    $scope.selectPO = selectPO;
+                    $scope.refreshPurchaseOrders = refreshPurchaseOrders;
+                    $scope.scrollTop = scrollTop;
+
+                    function init() {
+                      console.log('Pos controller initialized');
+                      loadPOs();
+                    }
+
+                    function loadPOs(reload) {
+                      $scope.pos = Data.pos.all({reload: reload});
+                      $timeout(function() {
+                        $scope.loaded = true;
+                        Utils.scrollTop();
+                      }, 300);
+                    }
+
+                    function reload() {
+                      loadPOs(true);
+                    }
+
+                    function selectPO(po) {
+                      $state.go('location', {
+                        action: 'receive',
+                        po: po.poNumber
+                      });
+                    }
+
+                    function refreshPurchaseOrders() {
+                      loadPOs(true);
+                      $scope.$broadcast('scroll.refreshComplete');
+                    }
+
+                    function scrollTop() {
+                      Utils.scrollTop();
+                    };
+
+                  }
+
+                })();
+              </pre>
+        </div>
     </div>
 
 
-<hr />
+    <hr/>
     <!-- Footer -->
     <footer>
         <div class="row">

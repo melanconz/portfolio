@@ -63,19 +63,18 @@
     <!-- Page Content -->
     <div class="container">
 
-      <!-- Page Heading -->
-      <div class="row">
-          <div class="col-lg-12">
-              <h1 class="page-header">Survey Management
+        <!-- Page Heading -->
+        <div class="row">
+            <div class="col-lg-12">
+                <h1 class="page-header">Survey Management
                   <small>Zachary Melancon</small>
               </h1>
-          </div>
-      </div>
-      <!-- /.row -->
+            </div>
+        </div>
+        <!-- /.row -->
         <p>
-          This application was designed for PPG to be able to easily build surveys with a great deal of control and allow employees to complete them on their mobile phones.
-          It was created for iOS and Android using <b>Ionic and AndroidJS</b>.  It pulls surveys which have been structured and populated in a
-          QuickBase application and displays them as a mobile application with all specifications made on QuickBase.
+            This application was designed for PPG to be able to easily build surveys with a great deal of control and allow employees to complete them on their mobile phones. It was created for iOS and Android using <b>Ionic and AndroidJS</b>. It pulls
+            surveys which have been structured and populated in a QuickBase application and displays them as a mobile application with all specifications made on QuickBase.
         </p>
         <br />
         <small>Click on the images to enlarge them.</small>
@@ -88,7 +87,7 @@
                         <img src="/images/angular/surveyerhome.png" alt="Home" style="width:100%">
                         <div class="caption">
                             <p>
-                              Home page allows users to choose between a list of surveys that were built on QuickBase. In this image, the list contains to surveys, but it can grow if more surveys are added to the associated QuickBase application
+                                Home page allows users to choose between a list of surveys that were built on QuickBase. In this image, the list contains to surveys, but it can grow if more surveys are added to the associated QuickBase application
                             </p>
                         </div>
                     </a>
@@ -101,7 +100,7 @@
                     <a href="/images/angular/surveyerauditinfo.png" target="_blank">
                         <img src="/images/angular/surveyerauditinfo.png" alt="Survey Info" style="width:100%">
                         <div class="caption">
-                            <p>After a survey is chosen, users must fill out a list of associated information.  This form undergoes validation to insure all fields are completed.</p>
+                            <p>After a survey is chosen, users must fill out a list of associated information. This form undergoes validation to insure all fields are completed.</p>
                         </div>
                     </a>
                 </div>
@@ -114,9 +113,8 @@
                         <img src="/images/angular/surveyerquestion.png" alt="Survey Question" style="width:100%">
                         <div class="caption">
                             <p>
-                              Questions display one at a time as slides, and are populated by calling the associated QuickBase apllication.
-                              When an answer is chosen, the top border of that answer choice displays a border color that can be specified through the QuickBase app.
-                              Notes can be left with any question. The info icon displays extra information if specified in QuickBase.
+                                Questions display one at a time as slides, and are populated by calling the associated QuickBase apllication. When an answer is chosen, the top border of that answer choice displays a border color that can be specified through the QuickBase app. Notes
+                                can be left with any question. The info icon displays extra information if specified in QuickBase.
                             </p>
                         </div>
                     </a>
@@ -132,8 +130,7 @@
                         <img src="/images/angular/surveyerdropdown.png" alt="Drop Down Menu" style="width:100%">
                         <div class="caption">
                             <p>
-                              A drop down menu that allows for complete navigation of the application is displayed in the right hand corner of every
-                              view.  All questions can be skipped and returned to.
+                                A drop down menu that allows for complete navigation of the application is displayed in the right hand corner of every view. All questions can be skipped and returned to.
                             </p>
                         </div>
                     </a>
@@ -147,20 +144,170 @@
                         <img src="/images/angular/surveyerreview.png" alt="Summary Page" style="width:100%">
                         <div class="caption">
                             <p>
-                              At anytime, a user can navigate to the Summary page and review the questions and answers.  If an answer has been made for a
-                              particular question, that question will display the response and it's top border will be the color associated with that
-                              response in QuickBase.  If an answer is not specified, "Unanswered" is displayed.  A user can click on any questio to return to it, and
-                              change or answer it. An audit can not be submitted until all questions are answered.
+                                At anytime, a user can navigate to the Summary page and review the questions and answers. If an answer has been made for a particular question, that question will display the response and it's top border will be the color associated with that response
+                                in QuickBase. If an answer is not specified, "Unanswered" is displayed. A user can click on any questio to return to it, and change or answer it. An audit can not be submitted until all questions are answered.
                             </p>
                         </div>
                     </a>
                 </div>
             </div>
         </div>
+
+        <hr />
+
+        <div class="code">
+            <h3>Code From the summary.ctrl.js File</h3>
+            <small>addition code unavailable</small>
+            <br />
+            <pre>
+              (function() {
+                  'use strict';
+
+                  angular.module('ppg')
+                      .controller('SummaryCtrl', SummaryCtrl);
+
+                  function SummaryCtrl($scope, $state, $stateParams, $ionicScrollDelegate, $ionicPopover, $location, $timeout, Audit, Data, Nav, Utils, PopupService) {
+
+                      var template = $stateParams.template;
+                      var audit;
+                      var headerData;
+                      var requiredField;
+                      $scope.template = template;
+                      $scope.submitted = false;
+                      $scope.isDisabled = false;
+                      $scope.goToDetails = goToDetails;
+                      $scope.goToQuestion = goToQuestion;
+                      function init() {
+                          $scope.stateName = $state.current.name;
+                          $scope.fromQuestion = $stateParams.fromQuestion || null;
+                          $scope.fromIndex = $stateParams.fromQuestion ? ($stateParams.fromQuestion - 1) : null;
+                          audit = Audit.getAudit();
+                          $scope.questions = audit.questions;
+                          $scope.headerData = audit.headerData;
+                          if ($scope.fromIndex && !$stateParams.fromAudit) {
+                              scrollToQuestion($scope.fromIndex);
+                          }
+                      }
+
+                      function scrollToQuestion(targetIndex) {
+                          $location.hash('card-' + targetIndex);   //set the location hash
+                          // $timeout(function() {
+                              var handle = $ionicScrollDelegate.$getByHandle('summaryScroll');
+                              handle.anchorScroll(true);
+                          // });
+
+                      }
+
+                      $scope.allQuestionsAnswered = function() {
+                          var count = 0;
+                          angular.forEach($scope.questions, function(question) {
+                              if (question.answer.label) {
+                                  count++;
+                              }
+                          });
+                          if (count === $scope.questions.length) {
+                              return true;
+                          } else {
+                              return false;
+                          }
+                      };
+
+                      function goToQuestion(index) {
+                          Utils.showLoader();
+                          if (index === 'null') {
+                              var index = $scope.questions.length - 1;
+                          }
+                          $state.go('questions', {
+                              questionNum: index + 1,
+                              template: $stateParams.template
+                          });
+                      };
+
+                     function goToDetails() {
+                        $state.go('auditdetails', {
+                          fromSummary: true,
+                          questionNum: $scope.fromIndex,
+                          template: $stateParams.template
+                        });
+                      };
+
+                      $scope.resetScroll = function() {
+                          $ionicScrollDelegate.scrollTop();
+                      };
+
+                      $scope.submit = function() {
+                        PopupService.confirmPopup({
+                            title: 'Alert',
+                            class: 'confirm-popup',
+                            text: 'Are you sure you have made all notes on the audit, and are ready to submit it?'
+                        }).then(function(response) {
+                            if (response) {
+                              Audit.clearAudit();
+                              Data.addAudit(audit);
+                              $scope.submitted = true;
+                            } else {
+                                console.log('Popup cancelled');
+                            }
+                        });
+                      };
+
+                       // Navigation popover
+                      $ionicPopover.fromTemplateUrl('templates/nav-popover.html', {
+                          scope: $scope,
+                      }).then(function(popover) {
+                          $scope.navPopover = popover;
+                      });
+
+                      $scope.$on('$destroy', function() {
+                          $scope.navPopover.remove();
+                      });
+
+                      function closeNavPopover() {
+                          $scope.navPopover.hide();
+                      }
+
+                      $scope.goToDetails = function() {
+                          closeNavPopover();
+                          goToDetails();
+                      };
+
+                      $scope.goToQuestions = function() {
+                          closeNavPopover();
+                          goToQuestion($scope.fromIndex);
+                      };
+
+                      $scope.goToSummary = function() {
+                          console.log('Already on summary page');
+                      };
+
+                      $scope.endAudit = function() {
+                          closeNavPopover();
+                          PopupService.confirmPopup({
+                              title: 'Alert',
+                              class: 'confirm-popup',
+                              text: 'Closing will cancel all of your progress on this audit. Do you wish to proceed?'
+                          }).then(function(response) {
+                              if (response) {
+                                  Audit.clearAudit();
+                                  Nav('audits');
+                              } else {
+                                  console.log('Popup cancelled');
+                              }
+                          });
+                      };
+                      // End Nav Popover
+
+                      init();
+
+                  }
+
+              })();
+              </pre>
+        </div>
     </div>
 
 
-<hr />
+    <hr />
     <!-- Footer -->
     <footer>
         <div class="row">
