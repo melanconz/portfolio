@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Zachary Melancon</title>
+
+    <!-- Bootstrap Core CSS -->
+    <link href="/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+    <!-- Custom CSS -->
+    <link href="/css/1-col-portfolio.css" rel="stylesheet">
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+</head>
+
+<body>
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+        <div class="container">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="/index.html">Projects by Zachary Melancon</a>
+            </div>
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav navbar-right">
+                    <li>
+                        <a href="/about.html">About</a>
+                    </li>
+                    <li>
+                        <a href="/contact.html">Contact</a>
+                    </li>
+                </ul>
+            </div>
+            <!-- /.navbar-collapse -->
+        </div>
+        <!-- /.container -->
+    </nav>
+
+    <!-- Page Content -->
+    <div class="container">
+
+      <!-- Page Heading -->
+      <div class="row">
+          <div class="col-lg-12">
+              <h1 class="page-header">Survey Management
+                  <small>Zachary Melancon</small>
+              </h1>
+          </div>
+      </div>
+      <!-- /.row -->
+        <p>
+          This application was designed for PPG to be able to easily build surveys with a great deal of control and allow employees to complete them on their mobile phones.
+          It was created for iOS and Android using <b>Ionic and AndroidJS</b>.  It pulls surveys which have been structured and populated in a
+          QuickBase application and displays them as a mobile application with all specifications made on QuickBase.
+        </p>
+        <br />
+        <small>Click on the images to enlarge them.</small>
+        <div class="row">
+            <div class="col-md-4">
+                <div class="thumbnail">
+                    <h4>Home</h4>
+                    <hr />
+                    <a href="/images/angular/surveyerhome.png" target="_blank">
+                        <img src="/images/angular/surveyerhome.png" alt="Home" style="width:100%">
+                        <div class="caption">
+                            <p>
+                              Home page allows users to choose between a list of surveys that were built on QuickBase. In this image, the list contains to surveys, but it can grow if more surveys are added to the associated QuickBase application
+                            </p>
+                        </div>
+                    </a>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="thumbnail">
+                    <h4>Survey Info</h4>
+                    <hr />
+                    <a href="/images/angular/surveyerauditinfo.png" target="_blank">
+                        <img src="/images/angular/surveyerauditinfo.png" alt="Survey Info" style="width:100%">
+                        <div class="caption">
+                            <p>After a survey is chosen, users must fill out a list of associated information.  This form undergoes validation to insure all fields are completed.</p>
+                        </div>
+                    </a>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="thumbnail">
+                    <h4>Survey Question</h4>
+                    <hr />
+                    <a href="/images/angular/surveyerquestion.png" target="_blank">
+                        <img src="/images/angular/surveyerquestion.png" alt="Survey Question" style="width:100%">
+                        <div class="caption">
+                            <p>
+                              Questions display one at a time as slides, and are populated by calling the associated QuickBase apllication.
+                              When an answer is chosen, the top border of that answer choice displays a border color that can be specified through the QuickBase app.
+                              Notes can be left with any question. The info icon displays extra information if specified in QuickBase.
+                            </p>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-4">
+                <div class="thumbnail">
+                    <h4>Drop Down Menu</h4>
+                    <hr />
+                    <a href="/images/angular/surveyerdropdown.png" target="_blank">
+                        <img src="/images/angular/surveyerdropdown.png" alt="Drop Down Menu" style="width:100%">
+                        <div class="caption">
+                            <p>
+                              A drop down menu that allows for complete navigation of the application is displayed in the right hand corner of every
+                              view.  All questions can be skipped and returned to.
+                            </p>
+                        </div>
+                    </a>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="thumbnail">
+                    <h4>Summary Page</h4>
+                    <hr />
+                    <a href="/images/angular/surveyerreview.png" target="_blank">
+                        <img src="/images/angular/surveyerreview.png" alt="Summary Page" style="width:100%">
+                        <div class="caption">
+                            <p>
+                              At anytime, a user can navigate to the Summary page and review the questions and answers.  If an answer has been made for a
+                              particular question, that question will display the response and it's top border will be the color associated with that
+                              response in QuickBase.  If an answer is not specified, "Unanswered" is displayed.  A user can click on any questio to return to it, and
+                              change or answer it. An audit can not be submitted until all questions are answered.
+                            </p>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+<hr />
+    <!-- Footer -->
+    <footer>
+        <div class="row">
+            <div class="col-lg-12">
+                <p>Copyright &copy; Zachary Melancon 2017</p>
+            </div>
+        </div>
+        <!-- /.row -->
+    </footer>
+    <!-- /.container -->
+
+    <!-- jQuery -->
+    <script src="/js/jquery.js"></script>
+
+    <!-- Bootstrap Core JavaScript -->
+    <script src="/js/bootstrap.min.js"></script>
+
+</body>
+
+</html>
