@@ -17,6 +17,14 @@ img.img-responsive.mobile-img {
     margin-left: 140px;
 }
 
+@media (max-width: 767px) {
+  img.img-responsive.mobile-img {
+      height: 500px;
+      margin-left: auto;
+      margin-right: auto;
+  }
+}
+
 .member-inner {
     background: #fff;
     -webkit-border-radius: 4px;
